@@ -104,7 +104,8 @@ class _LandingpageState extends State<Landingpage>
                               MaterialStateProperty.resolveWith((states) => 0),
                           alignment: Alignment.center,
                           backgroundColor: MaterialStateProperty.resolveWith(
-                              (states) => Theme.of(context).accentColor)),
+                              (states) =>
+                                  Theme.of(context).colorScheme.secondary)),
                     ),
                   ),
                 ),

@@ -7,6 +7,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:liteappv1/Signup.dart';
 import 'package:liteappv1/loginpagepainter.dart';
+import 'package:liteappv1/myroompage.dart';
 import 'package:liteappv1/signuppagepainter.dart';
 import 'package:page_transition/page_transition.dart';
 
@@ -185,7 +186,15 @@ class _loginpageState extends State<loginpage>
                     height: 50,
                   ),
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushReplacement(
+                          context,
+                          PageTransition(
+                            child: navigationbar(),
+                            type: PageTransitionType.fade,
+                            duration: Duration(milliseconds: 1500),
+                          ));
+                    },
                     child: Text(
                       'Login',
                       style: TextStyle(
