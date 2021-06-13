@@ -40,6 +40,12 @@ class _loginpageState extends State<loginpage>
 
   @override
   Widget build(BuildContext context) {
+    double heightratio = MediaQuery.of(context).size.height *
+        MediaQuery.of(context).devicePixelRatio /
+        2214;
+    double widthratio = MediaQuery.of(context).size.width *
+        MediaQuery.of(context).devicePixelRatio /
+        1080;
     return Scaffold(
       body: Stack(
         children: [
@@ -62,14 +68,14 @@ class _loginpageState extends State<loginpage>
                     Image.asset('assets/pasted image 0 (4) 1.png')
                   ]),
                   Container(
-                    height: 15,
+                    height: 15 * heightratio,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Image.asset('assets/Vector.png'),
                       Container(
-                        width: 10,
+                        width: 10 * widthratio,
                       ),
                       Text(
                         'litecode',
@@ -81,12 +87,12 @@ class _loginpageState extends State<loginpage>
                     ],
                   ),
                   Container(
-                    height: 30,
+                    height: 30 * heightratio,
                   ),
                   Container(
                     padding: EdgeInsets.fromLTRB(15, 0, 15, 0),
                     width: MediaQuery.of(context).size.width - 60,
-                    height: 70,
+                    height: 70 * heightratio,
                     child: TextFormField(
                         style: TextStyle(
                           // fontFamily: 'Helvetica',
@@ -96,7 +102,7 @@ class _loginpageState extends State<loginpage>
                         expands: false,
                         initialValue: "",
                         // scrollPadding: EdgeInsets.fromLTRB(0, 0, 0, 10),
-                        cursorHeight: 30,
+                        cursorHeight: 30 * heightratio,
                         cursorColor: Color(0xFF059FC9).withOpacity(0.23),
                         decoration: InputDecoration(
                           hintText: 'Username',
@@ -129,12 +135,12 @@ class _loginpageState extends State<loginpage>
                         )),
                   ),
                   Container(
-                    height: 20,
+                    height: 20 * heightratio,
                   ),
                   Container(
                       padding: EdgeInsets.fromLTRB(15, 0, 15, 0),
                       width: MediaQuery.of(context).size.width - 60,
-                      height: 70,
+                      height: 70 * heightratio,
                       child: TextFormField(
                         style: TextStyle(
                           // fontFamily: 'Helvetica',
@@ -145,7 +151,7 @@ class _loginpageState extends State<loginpage>
 
                         initialValue: "",
                         // scrollPadding: EdgeInsets.fromLTRB(0, 0, 0, 10),
-                        cursorHeight: 30,
+                        cursorHeight: 30 * heightratio,
                         cursorColor: Color(0xFF059FC9),
                         obscureText: obscurepw,
 
@@ -183,7 +189,7 @@ class _loginpageState extends State<loginpage>
                                 borderSide: BorderSide(width: 2))),
                       )),
                   Container(
-                    height: 50,
+                    height: 50 * heightratio,
                   ),
                   ElevatedButton(
                     onPressed: () {
@@ -204,7 +210,10 @@ class _loginpageState extends State<loginpage>
                     ),
                     style: ButtonStyle(
                         fixedSize: MaterialStateProperty.resolveWith((states) =>
-                            Size(MediaQuery.of(context).size.width - 100, 50)),
+                            Size(
+                                MediaQuery.of(context).size.width -
+                                    (100 * widthratio),
+                                50 * heightratio)),
                         elevation:
                             MaterialStateProperty.resolveWith((states) => 0),
                         shape: MaterialStateProperty.resolveWith(
@@ -215,7 +224,7 @@ class _loginpageState extends State<loginpage>
                             (states) => Color(0xFF059FC9).withOpacity(0.23))),
                   ),
                   Container(
-                    height: 20,
+                    height: 20 * heightratio,
                   ),
                   RichText(
                     text: TextSpan(children: [

@@ -37,6 +37,9 @@ dependencies:
   fraction: ^3.0.1
   animations: ^2.0.0
   animated_text_kit: ^4.2.1
+  google_sign_in: ^5.0.4
+  http: ^0.13.3
+  url_launcher: ^6.0.6
   # flutter_icons: ^1.1..
 
 
